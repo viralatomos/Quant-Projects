@@ -1,8 +1,6 @@
 # Momentum-Based Clustering and Portfolio Optimisation
 
-This project applies unsupervised learning and factor modelling techniques to build and backtest equity portfolios within the S&P 500 universe.  
-
-The aim is to explore whether clustering assets on technical indicators and Fama–French betas can improve risk-adjusted returns relative to benchmark strategies.
+Clustering is widely used in machine learning but less so in portfolio construction. This project tests whether grouping stocks by technical indicators and Fama–French betas yields distinct “momentum regimes” that can be exploited for better Sharpe ratios versus SPY and equal-weight benchmarks.
 
 ---
 
@@ -35,6 +33,23 @@ The aim is to explore whether clustering assets on technical indicators and Fama
    - Out-of-sample rolling window evaluation  
    - Performance measured against SPY (S&P 500 ETF)  
    - Risk metrics include Sharpe ratio, drawdowns, and volatility  
+
+---
+
+### Performance vs Benchmark
+
+![Cumulative Returns](results/strategy_vs_ew_vs_spy.png)
+
+
+### Results
+
+| Metric      | Strategy | EW     | SPY    |
+|-------------|----------|--------|--------|
+| AnnRet      | 0.2860   | 0.1613 | 0.1874 |
+| AnnVol      | 0.1796   | 0.1735 | 0.2098 |
+| Sharpe      | 1.5927   | 0.9298 | 0.8933 |
+| Cumulative  | 0.2467   | 0.1269 | 0.1450 |
+| MaxDD       | -0.1476  | -0.1449| -0.1876 |
 
 ---
 
