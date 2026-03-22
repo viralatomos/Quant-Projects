@@ -18,7 +18,6 @@ The main finding is cautious:
 
 - A mild residual-reversal pattern appears under FF3
 - That effect weakens materially under FF5
-- Lagged FF5 residual-reversal variants are not convincing
 - Simple residual momentum shows little evidence
 - Winsorising forward returns does not materially change the conclusion
 
@@ -93,7 +92,7 @@ This panel is the base dataset for factor neutralisation and signal testing.
 
 For each stock and month, $i$ and $t$, respectively:
 
-$$ r_{i, t}^{e} \equiv \text{ret\_1m}_{i,t} - R_{f, t},$$
+$$r_{i, t}^{e} \equiv r_{i, t} - R_{f, t},$$
 
 where $r_{i, t}^{e}$ is the one-month excess return and $R_{f, t}$ is the monthly risk-free rate.
 
@@ -115,12 +114,12 @@ Using estimated betas and realised month-$t$ factor returns, I decomposed monthl
 
 Conceptually:
 
-$$\text{excess return} = \text{fitted factor component} + \text{residual}$$
+$$\text{excess return} = \text{fitted factor component} + \text{residual}.$$
 
 More explicitly, the regression for estimating the factor betas are given by:
 
-$$r_{i, t}^{e} = \alpha_{i} + \beta_{i, \text{MKT}}\, f_{\text{MKT}, t} + \beta_{i, \text{SMB}}\, f_{\text{SMB}, t}
-                            + \beta_{i, \text{HML}}\, f_{\text{HML}, t} + \varepsilon_{i, t}.$$
+$$r_{i, t}^{e} = \alpha_{i} + \beta_{i, \text{MKT}}\\, f_{\text{MKT}, t}\\, + \beta_{i, \text{SMB}}\\, f_{\text{SMB}, t}
+                            + \beta_{i, \text{HML}}\\, f_{\text{HML}, t}\\, + \varepsilon_{i, t}.$$
 
 In this way, we can solve for the monthly residuals $\varepsilon_{i, t}$. The residual is the main object of interest.
 
@@ -137,7 +136,8 @@ In this way, we can solve for the monthly residuals $\varepsilon_{i, t}$. The re
 - Intuition: persistent residual strength may continue
 
 #### Lagged 3-month average residual reversal
-- Signal based on average lagged FF5 residual over the prior 3 months
+- Signal = average lagged residual over the prior 3 months
+- Intuition: repeated residual underperformance may be more likely to reverse than a single noisy monthly shock
 
 ### Robustness check
 - Forward returns winsorised cross-sectionally within each month at 5% / 95%
