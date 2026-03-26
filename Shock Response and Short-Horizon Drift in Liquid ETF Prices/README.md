@@ -80,9 +80,11 @@ This panel forms the basis of the analysis.
 ### 1. Shock event definition
 
 For each ETF-5 minute bar, a same-day $z$-score, $z_{t}^{ ( 3 ) }$, of rolling 3-bar return, $r_{t}^{ ( 3 ) }$, is computed. Here, the standard deviation is the rolling 78-bar (~1 trading day, not necessarily same-day) realised volatility, $\sigma_{t}^{ ( 78 ) }$. Hence, we have
+
 $$z_{t}^{ ( 3 ) } \equiv \frac{ r_{t}^{ ( 3 ) } }{ \sqrt{3}\, \sigma_{t}^{ ( 78 ) } }.$$
 
 Then, a shock event at $t$, is defined by the absolute value of the $z$-score exceeding 2.5, 
+
 $$\text{shock event}_{t} \equiv | z_{t}^{ ( 3 ) } | \ge 2.5.$$
 
 ### 2. Forward horizons
@@ -101,7 +103,9 @@ Post-shock response within the same day is measured over:
 ### 1. Large standardised intraday shocks are followed by continuation, not mean reversion
 
 Using the sign-adjusted response
+
 $$\text{signed forward return} = \text{shock sign} \times \text{forward return},$$
+
 positive values indicate continuation and negative values indicate mean reversion.
 
 Pooled across the 12 ETFs ($N = 345$ events), the average signed response is positive at all horizons:
