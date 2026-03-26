@@ -108,7 +108,7 @@ For each stock, I estimated rolling time-series factor betas using:
 
 ### 3. Residual construction
 
-Using estimated betas and realised month-$t$ factor returns, I decomposed monthly excess return into:
+Using estimated betas and realised month $t$ factor returns, I decomposed monthly excess return into:
 - factor-explained component
 - residual component
 
