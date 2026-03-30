@@ -1,4 +1,4 @@
-# Intraday Response and Continuation After Large Volatility-Normalised Price Shocks in Liquid ETFs
+# Shock Response and Short-Horizon Drift in Liquid ETF Prices
 
 ## Overview
 
