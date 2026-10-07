@@ -218,12 +218,12 @@ A simplified unilateral CVA calculation uses:
 CVA uses exposure multiplied by the discount factor from the same path before averaging:
 
 $$
-\operatorname{DEE}^{\mathbb Q}(t)=\mathbb E^{\mathbb Q}[D(0,t)V_t^+],
+\mathrm{DEE}^{\mathbb Q}(t)=\mathbb E^{\mathbb Q}[D(0,t)V_t^+],
 $$
 
 $$
 \mathrm{CVA}_0\approx\mathrm{LGD}\sum_{k=1}^{m}
-\operatorname{DEE}^{\mathbb Q}(u_k)[Q(u_{k-1})-Q(u_k)].
+\mathrm{DEE}^{\mathbb Q}(u_k)[Q(u_{k-1})-Q(u_k)].
 $$
 
 Here $Q(t)=e^{-\gamma t}$ is survival under $\mathbb Q$, $\mathrm{LGD}=1-\mathrm{REC}$, and $u_k$ are exposure dates. The default weight is the survival decrease over each interval.
